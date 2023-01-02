@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de tareas</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="icon.png">
+    <script src="https://kit.fontawesome.com/a7ae13901f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="header">
+        <nav class="header__nav">
+            <h1 class="header__tittle">Lista de tareas</h1>
+        </nav>
+    </header>
+    <main class="container">
+        <section class="createTask">
+            <input type="text" class="createTask__control" id="createTask__control" placeholder="Ingresa tu tarea">
+            <button type="button" class="createTask__addBtn" id="createTask__addBtn"><i class="fa-solid fa-plus"></i></button>
+            <button type="button" class="createTask__deleteAllBtn" id="createTask__deleteAllBtn"><i class="fa-regular fa-calendar-xmark"></i></button>
+        </section>
+        <section class="content" id="content">
+        </section>
+    </main>
+    <script src="main.js"></script>
+</body>
+</html>

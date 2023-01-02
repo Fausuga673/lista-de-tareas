@@ -1,0 +1,122 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+:root {
+    --text: #7f7f7f;
+    --shadow: 0 0 min(2px, .5vw) rgba(0, 0, 0, 0.2);
+    --blue-gradient: linear-gradient(0deg, #37afff, #59f1ff);
+    --item-gradient: linear-gradient(0deg, rgba(255, 255, 255, .5), rgba(255, 255, 255, .7));
+}
+
+body {
+    min-height: 100vh;
+    background: var(--blue-gradient);
+}
+
+.header {
+    width: 100%;
+    box-shadow: var(--shadow);
+    background: #fff;
+    font-size: max(15px, 1vw);
+    letter-spacing: max(1px, .2vw);
+}
+
+.header__nav, .container {
+    width: 60%;
+    margin: auto;
+    padding: 10px;
+    display: flex;
+    color: #aaaaaa;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container {
+    flex-direction: column;
+    padding: max(20px, .5vw) 10px 40px 10px;
+}
+
+@media (max-width: 1000px) {
+    .header__nav, .container {
+        width: 80%;
+    } 
+}
+
+.content {
+    width: 100%;
+}
+
+.createTask, .task {
+    width: 100%;
+    height: min(100px, 40vh);
+    margin-bottom: 20px;
+    padding: min(20px, 1vw);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    border-radius: max(12px, .8vw);
+    background: var(--item-gradient);
+    box-shadow: var(--shadow);
+}
+
+.task {
+    height: auto;
+}
+
+.createTask__control, .task__title {
+    width: 80%;
+    font-size: max(20px, 2vw);
+    color: var(--text);
+    border: none;
+    background: transparent;
+    letter-spacing: max(1px, .2vw);
+    resize: none;
+}
+
+.task__title {
+    padding: min(15px, 5vw);
+    max-height: min(150px, 50vh);
+}
+
+.task__title::-webkit-scrollbar {
+    width: 0px;
+}
+
+.createTask__control {
+    padding: 10px min(10px, 5vw);
+    border-radius: max(12px, .8vw);
+    background: var(--item-gradient);
+    box-shadow: var(--shadow);
+}
+
+.createTask__control, .task__title:focus {
+    outline: none;
+}
+
+.task__updateBtn, 
+.task__deleteBtn, 
+.createTask__addBtn, 
+.createTask__deleteAllBtn {
+    margin-right: 10px;
+    padding: 10px min(10px, 5vw);
+    font-size: max(20px, 2vw);
+    color: var(--text);
+    border: 0;
+    border-radius: max(12px, .8vw);
+    background: var(--item-gradient);
+    box-shadow: var(--shadow);
+    cursor: pointer;
+}
+
+.createTask__addBtn {
+    margin-left: 5px;
+}
+
+.task__updateBtn, .createTask__addBtn  {
+    margin-left: auto;
+}
